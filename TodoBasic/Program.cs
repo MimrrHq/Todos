@@ -19,7 +19,7 @@ async Task GetTodos(HttpContext context)
 {
     using var db = new TodoDbContext();
     var todos = await db.Todos.ToListAsync();
-
+    Console.WriteLine("Hello");
     await context.Response.WriteAsJsonAsync(todos);
 }
 
